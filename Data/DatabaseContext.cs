@@ -86,8 +86,7 @@ namespace Student_Management_API.Data
                 .OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<Enrollment>()
                 .HasIndex(e => new { e.StudentId, e.CourseId })
-                .IsUnique()
-                .HasName("IX_Enrollment_StudentId_CourseId");
+                .IsUnique();
         }
     }
 }
